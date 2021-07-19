@@ -1,9 +1,16 @@
 Lesson 3 - In this lab I would like you to do the following. 
 
 1. Create a directory structure /tmp/files/pictures, /tmp/files/photos and /tmp/files/videos
+Answer: mkdir /tmp/files/pictures /tmp/files/photos /tmp/files/videos
 2. Copy all files that have aname starting with an a, b, or c from /etc to /tmp/files
+Answer: find /etc -maxdepth 1 -type f -name '[abc]*' -exec cp -t /tmp/files {} \;
 3. From /tmp/files, move all files that have a name starting with an a or b to /tmo/files/photos, and filew with a name starting with a c to /tmp/files/videos
+Answer: find /tmp/files -maxdepth 1 -type f -name '[ab]*' -exec mv -t /tmp/files/photos {} \; && find /tmp/files -maxdepth 1 -type f -name '[c]*' -exec mv -t /tmp/files/videos {} \;
 4. Find all files in /etc that have a size smaller than 1000 bytes and copy those to /tmp/files/pictures
+Answer: find /etc -maxdepth 1 -type f -size -1000c -exec cp -t /tmp/files/pictures {} \;
 5. In /tmp/files, create a symbolic link to /var
+Answer: ln -s /var /tmp/files
 6. Create a compressed archive file of the /home direcoty
+Answer: tar -czvf my_home_archive /home
 7. Extract this compressed archive file with relative file names in /tmp/archive
+Answer: mkdir /tmp/archive && tar -xvf my_home_archive -C /tmp/archive
