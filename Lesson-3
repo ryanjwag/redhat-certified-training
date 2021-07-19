@@ -1,9 +1,10 @@
 Lesson 3 - In this lab I would like you to do the following. 
 
 1. Create a directory structure /tmp/files/pictures, /tmp/files/photos and /tmp/files/videos
-Answer: mkdir /tmp/files/pictures /tmp/files/photos /tmp/files/videos
+Answer: mkdir -p /tmp/files/pictures /tmp/files/photos /tmp/files/videos
 2. Copy all files that have aname starting with an a, b, or c from /etc to /tmp/files
 Answer: find /etc -maxdepth 1 -type f -name '[abc]*' -exec cp -t /tmp/files {} \;
+Alternative Answer: cp /etc/[a-c]* /tmp/files
 3. From /tmp/files, move all files that have a name starting with an a or b to /tmo/files/photos, and filew with a name starting with a c to /tmp/files/videos
 Answer: find /tmp/files -maxdepth 1 -type f -name '[ab]*' -exec mv -t /tmp/files/photos {} \; && find /tmp/files -maxdepth 1 -type f -name '[c]*' -exec mv -t /tmp/files/videos {} \;
 4. Find all files in /etc that have a size smaller than 1000 bytes and copy those to /tmp/files/pictures
