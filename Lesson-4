@@ -1,0 +1,19 @@
+Lesson 5
+
+1. Use head and tail to display the fifth line of the file /etc/passwd
+Answer: head -n 5 /etc/passwd | tail -n 1
+2. Use sed to display the fifth line of the file /etc/passwd
+Answer: sed -n 5p /etc/passwd
+Alternative Answer: sed '5q' /etc/passwd
+3. Use awk in a pipe to filter the last column out  of the results of the command ps aux
+Answer: ps aux | '{print $NF}'
+Alternative Answer: ps aux | awk '{print $11}'
+4. Use grep to show the names of all files in /etc that have lines that contain the text 'root' as a word
+Answer in /etc: grep '\<root\>' * 2>/dev/null
+Answer: grep -r '\<root\>' /etc
+5. Use grep to show all lines form all files in /etc that contain exavtly 3 characters
+Answer if in /etc: grep '^...$' * 2>/dev/null
+Answer: grep -r '\<root\>' /etc
+6. Use grep to find all files that contain the string "alex", but make sure that "alexander" is not included in the result
+Answer: grep '^alex$' *
+Alternative Answer: grep '\<alex\>' *
