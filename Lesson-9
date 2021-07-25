@@ -1,0 +1,6 @@
+Type the following command: dd if=/dev/zero of=/dev/null. Change it froma  foreground to a background job
+Answer: bg
+Run this command 3 more times, but start it as a background job immeditely
+Answer: dd if=/dev/zero of=/dev/null &
+Use jobs to get information about current background jobs
+Answer: jobs
