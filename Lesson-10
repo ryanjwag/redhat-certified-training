@@ -1,0 +1,6 @@
+Ensure your system is using a YUM repository for base packages as well as application streams
+FInd the packag that contains the sepolicy program file and install it
+Install the previous version of PHP
+Downlaod the httpd package from the repositories without instlalling it, and query to see if there are any scripts in it
+Answer: yum install yum-plugin-downloadonly; yum install --downloadonly --downloaddir=/tmp httpd
+Alternative Answer: yum install yum-utils; yumdownloader httpd
