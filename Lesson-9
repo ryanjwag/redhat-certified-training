@@ -4,3 +4,9 @@ Run this command 3 more times, but start it as a background job immeditely
 Answer: dd if=/dev/zero of=/dev/null &
 Use jobs to get information about current background jobs
 Answer: jobs
+From top, change the niceness on one of the dd processes to -5 and observe what happens
+Answer: top, press r and then specify -5
+From top, send a sigkill signal to top and observe what happens
+Answer: top, press k and then specify -9
+Fom the command line, terminate all remaining dd processes
+Answer: killall dd
