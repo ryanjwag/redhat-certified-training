@@ -1,0 +1,6 @@
+Make sure the httpd service is automatically started
+Edit its configuration such tat on failure, it will continue after 1 minute
+systemctl edit httpd
+systemctl cat httpd
+systemctl daemon-reload
+systemctl enable --now httpd
